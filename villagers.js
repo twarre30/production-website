@@ -1,13 +1,20 @@
 const $animals = document.querySelector('#animals')
 const $villagerName =document.querySelector('.villagerName')
 
-const url = 'http://acnhapi.com/v1/villagers/1'
+const url = 'https://acnhapi.com/v1a/villagers/1'
 fetch(url)
     .then(response => {
         return response.json()
     }).then(response => {
-        const villageUrl = response.name.name-USen
-        const li = document.querySelector('li')
+        const villagerName = response.name['name-USen'] 
+        const villagerImage = response.image_uri
+        console.log(villagerName, villagerImage) 
+        const li = document.createElement('li')
+        li.innerHTML = `
+        <img src="${villagerImage}"> 
+        <span>${villagerName}</span>
+        `
         $villagerName.append(li)
-        console.log(villageUrl)
+    }).catch(error => {
+        console.error(error.message)
     })
