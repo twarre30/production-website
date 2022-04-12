@@ -8,7 +8,6 @@ fetch(url)
     }).then(response => {
         const villagerName = response.name['name-USen'] 
         const villagerImage = response.image_uri
-        console.log(villagerName, villagerImage) 
         const li = document.createElement('li')
         li.innerHTML = `
         <img src="${villagerImage}"> 
