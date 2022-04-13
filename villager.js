@@ -24,6 +24,19 @@ function addVillagerImage(villager) {
     $villagerName.append(div)
 }
 
+function addVillagerSpecs(villager) {
+    const li = document.createElement('li')
+    const species= (villager.species)
+        .find(species => species)
+    li.innerHTML = `
+        <span>${villager.name}</span>
+        <br><br>
+        <span>${species.species}</span>
+        <br><br>
+        `
+    ul.append(li)
+}
+
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
 fetch('https://acnhapi.com/v1a/villagers/${queryString.get("villager")}')
@@ -31,19 +44,19 @@ fetch('https://acnhapi.com/v1a/villagers/${queryString.get("villager")}')
         return response.json()
     }).then(response => {
         addVillagerImage(response)
-        const species = response.species
+        const specieRequest = response.species
             .map(response => response.specie.url)
             .map(url => {
                 return fetch(url).then(response => response.json())
             })
-        return Promise.all(species)
+        return Promise.all(specieRequest)
       //  const villagers = response.map(villager => villager)
         //villagers.forEach(villager => {
             
         }).then(responses => {
             spinner.classList.add('hidden')
             responses.forEach(response => {
-                (response)
+                addVillagerSpecs(response)
             }).catch((error) => {
                 const $p = document.createElement('p');
                 $p.textContent = "Something went wrong!";
