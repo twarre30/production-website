@@ -1,28 +1,52 @@
 const $animals = document.querySelector('#animals')
-const $villagerName =document.querySelector('.villagerName')
+const $villagerName = document.querySelector('.villagerName')
+const spinner = document.querySelector(".lds-hourglass")
 
-const url = 'https://acnhapi.com/v1a/villagers/1'
-fetch(url)
+/*
+const villagerSpecs = {
+    Name: $name['name-USen'],
+    Personality: personality,
+    Birthday: ['birthday-string'],
+    Species: species,
+    Gender: gender,
+    Hobby: hobby,
+    Catch_Phrase: ['catch-phrase'],
+}
+*/
+
+function addVillagerImage(villager) {
+    const div = document.createElement('div')
+    div.innerHTML = `
+        <figure>
+            <img src="${villager.image_uri}" />
+        </figure>
+    `
+    $villagerName.append(div)
+}
+
+const url = new URL(window.location)
+const queryString = new URLSearchParams(url.search)
+fetch('https://acnhapi.com/v1a/villagers/${queryString.get("villager")}')
     .then(response => {
         return response.json()
     }).then(response => {
-        const villagerName = response.name['name-USen'] 
-        const villagerImage = response.image_uri
-        const villagerPersonality = response.personality
-        const villagerBirthday = response['birthday-string']
-       // const villagerSpecies = response.species
-        //const villagerGender = response.gender
-        //const villagerHobby = response.hobby
-
-
-        const li = document.createElement('li')
-        li.innerHTML = `
-        <img src="${villagerImage}"> 
-        <span>${villagerName}</span>
-        <span>${villagerPersonality}</span>
-        <span>${villagerBirthday}</span>
-        `
-        $villagerName.append(li)
-    }).catch(error => {
-        console.error(error.message)
-    })
+        addVillagerImage(response)
+        const species = response.species
+            .map(response => response.specie.url)
+            .map(url => {
+                return fetch(url).then(response => response.json())
+            })
+        return Promise.all(species)
+      //  const villagers = response.map(villager => villager)
+        //villagers.forEach(villager => {
+            
+        }).then(responses => {
+            spinner.classList.add('hidden')
+            responses.forEach(response => {
+                (response)
+            }).catch((error) => {
+                const $p = document.createElement('p');
+                $p.textContent = "Something went wrong!";
+                document.querySelector('#animals').append($p);
+            })
+        })

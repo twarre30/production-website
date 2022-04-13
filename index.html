@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"></link>
     <link rel="stylesheet" href="index.css">
     <script defer src = "index.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -17,11 +17,15 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="villagers.html">Villagers</a></li>
+                <li><a href="allVillagers.html">Villagers</a></li>
             </ul>
         </nav>
         <div>
-
+            <form>
+                <label for="search">Search</label>
+                <input id="search" name="villager" />
+                <input type="submit" value="Search" />
+            </form>
         </div>
         <div class="lds-hourglass"></div>   <!--Spinner-->
     </main>

@@ -4,7 +4,13 @@ h1 {
     font-size: 50px;
 }
 
+nav {
+    padding: 20px;
+}
 
+form {
+    text-align: center;
+}
 
 
 /* spinner */
