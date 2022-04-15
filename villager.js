@@ -39,7 +39,7 @@ function addVillagerSpecs(villager) {
 
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
-fetch('https://acnhapi.com/v1a/villagers/${queryString.get("villager")}')
+fetch('https://acnhapi.com/v1a/villagers')
     .then(response => {
         return response.json()
     }).then(response => {

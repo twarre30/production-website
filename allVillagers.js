@@ -11,7 +11,15 @@ fetch(url)
             const div = document.createElement('div')
             div.innerHTML = `
                 <img src="${villager.image_uri}"> 
-                <figcaption><a href="villager.html?villager=${villager.name['name-USen']}">${villager.name['name-USen']}</a></figcaption>
+                <figcaption>${villager.name['name-USen']}</figcaption>
+                <aside>
+                    <p>Personality: ${villager.personality}<br>
+                    Birthday: ${villager['birthday-string']}<br>
+                    Species: ${villager.species}<br>
+                    Gender: ${villager.gender}<br>
+                    Hobby: ${villager.hobby}<br>
+                    Catch-Phrase: "${villager['catch-phrase']}"
+                </aside>
         `
             $animals.append(div)
         })
