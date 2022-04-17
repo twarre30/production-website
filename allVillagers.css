@@ -25,7 +25,7 @@ a {
 }
 
 .search-wrapper {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     padding-bottom: 25px;
 }
@@ -49,6 +49,8 @@ img{
     width: 200px;
     padding: 20px;
     border-radius: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 figcaption {
@@ -59,10 +61,10 @@ figcaption {
     text-transform: capitalize;
 }
 
-aside {
+.specs {
     text-align: center;
     font-size: 25px;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* spinner */
@@ -97,4 +99,8 @@ aside {
 100% {
     transform: rotate(1800deg);
 }
+}
+
+.hidden {
+    display: none;
 }

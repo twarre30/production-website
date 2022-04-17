@@ -34,53 +34,17 @@ fetch(url)
             const phrase = card.querySelector('[data-phrase]')
             image.src = villager.image_uri 
             name.textContent = villager.name['name-USen']
-            personality.textContent = villager.personality
-            birthday.textContent = villager['birthday-string']
-            species.textContent = villager.species
-            gender.textContent = villager.gender
-            hobby.textContent = villager.hobby
-            phrase.textContent = villager['catch-phrase']
+            personality.textContent = `Personality: ${villager.personality}`
+            birthday.textContent = `Birthday: ${villager['birthday-string']}`
+            species.textContent = `Species: ${villager.species}`
+            gender.textContent = `Gender: ${villager.gender}`
+            hobby.textContent = `Hobby: ${villager.hobby}`
+            phrase.textContent = `Catch-Phrase: ${villager['catch-phrase']}`
             villagerCardContainer.append(card)
             return {
                 name: villager.name['name-USen'], personality: villager.personality, birthday: villager['birthday-string'], species: villager.species,
                 gender: villager.gender, hobby: villager.hobby, phrase: villager['catch-phrase'], element: card
             }
-        })
-
-    })
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   /*
-const $animals = document.querySelector('#animals')
-   .then(response => {
-        const villagers = response.map(villager => villager)
-        villagers.forEach(villager => {
-            const div = document.createElement('div')
-            div.innerHTML = `
-                <img src="${villager.image_uri}"> 
-                <figcaption>${villager.name['name-USen']}</figcaption>
-                <aside>
-                    <p>Personality: ${villager.personality}<br>
-                    Birthday: ${villager['birthday-string']}<br>
-                    Species: ${villager.species}<br>
-                    Gender: ${villager.gender}<br>
-                    Hobby: ${villager.hobby}<br>
-                    Catch-Phrase: "${villager['catch-phrase']}"
-                </aside>
-        `
-            $animals.append(div)
         })
     }).then(responses => {
         spinner.classList.add('hidden')
@@ -91,4 +55,4 @@ const $animals = document.querySelector('#animals')
             $p.textContent = "Something went wrong!";
             document.querySelector('#animals').append($p);
         })
-    })*/
+    })
