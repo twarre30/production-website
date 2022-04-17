@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"></link>
+    <link rel="stylesheet" href="fishes.css">
+    <script defer src = "fishes.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Production Website</title>
+</head>
+<body>
+    <header>
+        <h1>The Fishes</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="villagers.html">Villagers</a></li>
+                <li><a href="fishes.html"></a></li>
+            </ul>
+        </nav>
+        <div class="search-wrapper">
+            <label for="search">Search Fishes:</label>
+            <input id="search" name="search" data-search />
+        </div>
+        <div class="fishes-cards" data-fish-cards-container>
+            <template data-fish-template>
+                <div class="card">
+                    <img src="fish.image_uri" class="image" data-image>
+                    <figcaption class="name" data-name>fish.name['name-USen']</figcaption>
+                    <div class= "specs" data-availability-location></div>
+                    <div class= "specs" data-availability-rarity></div>
+                    <div class= "specs" data-shadow></div>
+                    <div class= "specs" data-price></div>
+                    <div class= "specs" data-price-cj></div>
+                </div>
+            </template>
+        </div>
+
+        <div class="lds-hourglass"></div>    <!--Spinner-->
+    </main>
+</body>
+</html>
