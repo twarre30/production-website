@@ -7,13 +7,12 @@ let villagers = []
 
 searchInput.addEventListener('input', event => {
     const value = event.target.value.toLowerCase()
-    console.log(value)
     villagers.forEach(villager => {
         const isVisible = villager.name.toLowerCase().includes(value) || villager.personality.toLowerCase().includes(value) ||
             villager.birthday.toLowerCase().includes(value) || villager.species.toLowerCase().includes(value) ||
             villager.gender.toLowerCase().includes(value) || villager.hobby.toLowerCase().includes(value) ||
             villager.phrase.toLowerCase().includes(value)
-    villager.element.classList.toggle('hide', !isVisible)    
+        villager.element.classList.toggle('hide', !isVisible)  
     })
 })
 
@@ -21,6 +20,7 @@ const url = 'https://acnhapi.com/v1a/villagers'
 fetch(url)
     .then(response => response.json())
     .then(data => {
+        spinner.classList.add('hidden')
         villagers = data.map(villager => {
             const card = villagerCardTemplate.content.cloneNode(true).children[0]
             const image = card.querySelector('[data-image]')
@@ -45,13 +45,8 @@ fetch(url)
                 gender: villager.gender, hobby: villager.hobby, phrase: villager['catch-phrase'], element: card
             }
         })
-    }).then(responses => {
-        spinner.classList.add('hidden')
-        responses.forEach(response => {
-            (response)
         }).catch((error) => {
             const $p = document.createElement('p');
             $p.textContent = "Something went wrong!";
-            document.querySelector('#animals').append($p);
+            document.querySelector('.villager-cards').append($p);
         })
-    })
