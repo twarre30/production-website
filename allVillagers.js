@@ -1,4 +1,3 @@
-const $animals = document.querySelector('#animals')
 const villagerCardTemplate = document.querySelector('[data-villager-template]')
 const villagerCardContainer = document.querySelector('[data-villager-cards-container]')
 const spinner = document.querySelector('.lds-hourglass')

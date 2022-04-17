@@ -1,65 +1,57 @@
-const $animals = document.querySelector('#animals')
-const $villagerName = document.querySelector('.villagerName')
-const spinner = document.querySelector(".lds-hourglass")
+const fishCardTemplate = document.querySelector('[data-villager-template]')
+const villagerCardContainer = document.querySelector('[data-villager-cards-container]')
+const spinner = document.querySelector('.lds-hourglass')
+const searchInput = document.querySelector('[data-search]')
 
-/*
-const villagerSpecs = {
-    Name: $name['name-USen'],
-    Personality: personality,
-    Birthday: ['birthday-string'],
-    Species: species,
-    Gender: gender,
-    Hobby: hobby,
-    Catch_Phrase: ['catch-phrase'],
-}
-*/
+let villagers = []
 
-function addVillagerImage(villager) {
-    const div = document.createElement('div')
-    div.innerHTML = `
-        <figure>
-            <img src="${villager.image_uri}" />
-        </figure>
-    `
-    $villagerName.append(div)
-}
+searchInput.addEventListener('input', event => {
+    const value = event.target.value.toLowerCase()
+    console.log(value)
+    villagers.forEach(villager => {
+        const isVisible = villager.name.toLowerCase().includes(value) || villager.personality.toLowerCase().includes(value) ||
+            villager.birthday.toLowerCase().includes(value) || villager.species.toLowerCase().includes(value) ||
+            villager.gender.toLowerCase().includes(value) || villager.hobby.toLowerCase().includes(value) ||
+            villager.phrase.toLowerCase().includes(value)
+    villager.element.classList.toggle('hide', !isVisible)    
+    })
+})
 
-function addVillagerSpecs(villager) {
-    const li = document.createElement('li')
-    const species= (villager.species)
-        .find(species => species)
-    li.innerHTML = `
-        <span>${villager.name}</span>
-        <br><br>
-        <span>${species.species}</span>
-        <br><br>
-        `
-    ul.append(li)
-}
-
-const url = new URL(window.location)
-const queryString = new URLSearchParams(url.search)
-fetch('https://acnhapi.com/v1a/villagers')
-    .then(response => {
-        return response.json()
-    }).then(response => {
-        addVillagerImage(response)
-        const specieRequest = response.species
-            .map(response => response.specie.url)
-            .map(url => {
-                return fetch(url).then(response => response.json())
-            })
-        return Promise.all(specieRequest)
-      //  const villagers = response.map(villager => villager)
-        //villagers.forEach(villager => {
-            
-        }).then(responses => {
-            spinner.classList.add('hidden')
-            responses.forEach(response => {
-                addVillagerSpecs(response)
-            }).catch((error) => {
-                const $p = document.createElement('p');
-                $p.textContent = "Something went wrong!";
-                document.querySelector('#animals').append($p);
-            })
+const url = 'https://acnhapi.com/v1a/fish'
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        fish = data.map(fish => {
+            const card = fishCardTemplate.content.cloneNode(true).children[0]
+            const image = card.querySelector('[data-image]')
+            const name = card.querySelector('[data-name]')    
+            const personality = card.querySelector('[data-personality]')
+            const birthday = card.querySelector('[data-birthday')
+            const species = card.querySelector('[data-species]')
+            const gender = card.querySelector('[data-gender]')
+            const hobby = card.querySelector('[data-hobby]')
+            const phrase = card.querySelector('[data-phrase]')
+            image.src = fish.image_uri 
+            name.textContent = villager.name['name-USen']
+            personality.textContent = `Personality: ${villager.personality}`
+            birthday.textContent = `Birthday: ${villager['birthday-string']}`
+            species.textContent = `Species: ${villager.species}`
+            gender.textContent = `Gender: ${villager.gender}`
+            hobby.textContent = `Hobby: ${villager.hobby}`
+            phrase.textContent = `Catch-Phrase: ${villager['catch-phrase']}`
+            villagerCardContainer.append(card)
+            return {
+                name: villager.name['name-USen'], personality: villager.personality, birthday: villager['birthday-string'], species: villager.species,
+                gender: villager.gender, hobby: villager.hobby, phrase: villager['catch-phrase'], element: card
+            }
         })
+    }).then(responses => {
+        spinner.classList.add('hidden')
+        responses.forEach(response => {
+            (response)
+        }).catch((error) => {
+            const $p = document.createElement('p');
+            $p.textContent = "Something went wrong!";
+            document.querySelector('#animals').append($p);
+        })
+    })

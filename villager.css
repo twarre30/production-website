@@ -1,11 +1,71 @@
+body {
+    background-color: hsl(43, 99%, 75%);
+}
+
 h1 {
     text-align: center;
-    color: hsl(30, 46%, 46%);
-    font-size: 50px;
+    color: hsl(30, 46%, 35%);
+    font-size: 75px;
+    padding-bottom: 25px;
+}
+
+nav {
+    float: right;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search-wrapper {
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 25px;
+}
+
+input {
+    font-size: 25px;
+}
+
+.hide {
+    display: none;
 }
 
 
+div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    border: 1px solid hsl(30, 46%, 35%);
+}
 
+img{
+    width: 200px;
+    padding: 20px;
+    border-radius: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.specs {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
 
 /* spinner */
 
@@ -39,4 +99,8 @@ h1 {
 100% {
     transform: rotate(1800deg);
 }
+}
+
+.hidden {
+    display: none;
 }
