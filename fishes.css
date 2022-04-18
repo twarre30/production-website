@@ -33,6 +33,7 @@ a:hover {
     color: hsl(209, 84%, 51%);
     transition: color 125ms;
     text-decoration: none;
+    background-color: #fff;
 }
 
 li {
@@ -45,7 +46,8 @@ li {
 .search-wrapper {
     font-size: 30px;
     font-weight: bolder;
-    padding-bottom: 25px;
+    margin-top: -3%;
+    border: 0;
 }
 
 input {
@@ -83,6 +85,27 @@ figcaption {
     text-align: center;
     font-size: 25px;
     padding: 10px;
+}
+
+/*Back to Top */
+
+.top {
+    --offset: 50px; 
+
+    position: sticky;
+    bottom: 20px;      
+    margin-left: 90%; 
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+
+  /* visual styling */
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    white-space: nowrap;
 }
 
 /* spinner */

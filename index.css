@@ -21,6 +21,7 @@ a:hover {
     color: hsl(209, 84%, 51%);
     transition: color 125ms;
     text-decoration: none;
+    background-color: #fff;
 }
 
 li {
