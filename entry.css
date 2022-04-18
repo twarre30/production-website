@@ -6,9 +6,11 @@ body {
 
 h1 {
     text-align: center;
+    font-weight: bolder;
     color: hsl(30, 46%, 35%);
     font-size: 75px;
-    padding-top: 25px;
+    padding: 25px;
+    margin: 25px 0;
 }
 
 .logo {
@@ -63,16 +65,53 @@ input {
 
 
 div {
-    background-color: #fff;
+    background-color: hsl(43, 99%, 75%);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     border: 1px solid hsl(30, 46%, 35%);
 }
 
+label {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin-left: 30%;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 80px;
+    height: 50px;
+    font-weight: bold;
+    background-color: hsl(43, 99%, 75%);
+    font-size: 15px;
+    margin: 1%;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.radio {
+    font-size: 20px;
+}
+
+.rbutton {
+    position: relative;
+    margin-left: 90%;
+    margin-top: -6%;
+}
+
 img{
-    width: 50px;
+    width: 80px;
     padding: 20px;
-    border-radius: 25%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -80,7 +119,7 @@ img{
 figcaption {
     font-weight: bold;
     text-align: center;
-    font-size: 10px;
+    font-size: 25px;
     padding: 10px;
     text-transform: capitalize;
 }
