@@ -46,7 +46,7 @@ li {
 .search-wrapper {
     font-size: 30px;
     font-weight: bolder;
-    margin-top: -3%;
+    padding: 20px;
     border: 0;
 }
 
