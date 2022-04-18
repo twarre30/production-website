@@ -19,7 +19,7 @@ fetch(url)
     .then(response => response.json())
     .then(data => {
         spinner.classList.add('hidden')
-        fish = data.map(fish => {
+        fishes = data.map(fish => {
             const card = fishCardTemplate.content.cloneNode(true).children[0]
             const image = card.querySelector('[data-image]')
             const name = card.querySelector('[data-name]')    

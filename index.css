@@ -1,16 +1,45 @@
-h1 {
-    text-align: center;
-    font-size: 50px;
+body {
+    background-color: hsl(43, 99%, 75%);
 }
 
 nav {
-    padding: 20px;
+    display: inline-flexbox;
+    position: relative;
+    margin-left: 85%;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-form {
+a {
+    text-decoration: none;
+    color:  hsl(43, 99%, 75%);
+}
+
+a:hover {
+    color: hsl(209, 84%, 51%);
+    transition: color 125ms;
+    text-decoration: none;
+}
+
+li {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 0 50% 50% 0 ;
+    background-color: hsl(30, 46%, 55%)
+}
+
+
+.title {
+    text-align: center;
+    margin-top: -10%;
+    padding-bottom: 20px;
+}
+
+.picnic {
     text-align: center;
 }
-
 
 /* spinner */
 
@@ -45,3 +74,8 @@ form {
     transform: rotate(1800deg);
 }
 }
+
+.hidden {
+    display: none;
+}
+

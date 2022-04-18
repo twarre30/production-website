@@ -6,22 +6,41 @@ h1 {
     text-align: center;
     color: hsl(30, 46%, 35%);
     font-size: 75px;
-    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.logo {
+    position: relative;
+    margin-top: -70%;
 }
 
 nav {
-    float: right;
-    font-size: 25px;
-    color: black;
+    display: inline-flexbox;
+    position: relative;
+    margin-top: -6%;
+    margin-left: 85%;
+    padding: 30px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 25px;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: lightblue;
+    text-transform: uppercase;
 }
 
 a {
     text-decoration: none;
+    color:  hsl(43, 99%, 75%);
+}
+
+a:hover {
+    color: hsl(209, 84%, 51%);
+    transition: color 125ms;
+    text-decoration: none;
+}
+
+li {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 0 50% 50% 0 ;
+    background-color: hsl(30, 46%, 55%)
 }
 
 .search-wrapper {
@@ -104,3 +123,4 @@ figcaption {
 .hidden {
     display: none;
 }
+
