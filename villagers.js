@@ -11,7 +11,7 @@ searchInput.addEventListener('input', event => {
         const isVisible = villager.name.toLowerCase().includes(value) || villager.personality.toLowerCase().includes(value) ||
             villager.birthday.toLowerCase().includes(value) || villager.species.toLowerCase().includes(value) ||
             villager.gender.toLowerCase().includes(value) || villager.hobby.toLowerCase().includes(value) ||
-            villager.phrase.toLowerCase().includes(value)
+            villager.phrase.toLowerCase().includes(value) 
         villager.element.classList.toggle('hide', !isVisible)  
     })
 })

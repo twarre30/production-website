@@ -16,6 +16,9 @@ searchInput.addEventListener('input', event => {
     })
 }) */
 
+
+
+
 const url = 'https://acnhapi.com/v1a/villagers'
 fetch(url)
     .then(response => response.json())
@@ -37,3 +40,16 @@ fetch(url)
             $p.textContent = "Something went wrong!";
             document.querySelector('.villager-cards').append($p);
         })
+
+const mylink = 'index.html'
+
+function targetopener(mylink, closeme, closeonly) {
+    if (!(window.focus && window.opener)) return true;
+    window.opener.focus();
+    if (!closeonly) window.opener.location.href = mylink.href;
+    if (closeme) window.close();
+    return false;
+}
+
+
+
