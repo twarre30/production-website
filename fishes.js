@@ -42,7 +42,5 @@ fetch(url)
             }
         })
         }).catch((error) => {
-            const $p = document.createElement('p');
-            $p.textContent = "Something went wrong!";
-            document.querySelector('.fishes-cards').append($p);
+            window.location.href = '404page.html'
         })

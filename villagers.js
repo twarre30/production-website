@@ -46,7 +46,5 @@ fetch(url)
             }
         })
         }).catch((error) => {
-            const $p = document.createElement('p');
-            $p.textContent = "Something went wrong!";
-            document.querySelector('.villager-cards').append($p);
+            window.location.href = '404page.html'
         })
