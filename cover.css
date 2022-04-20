@@ -42,6 +42,16 @@ li {
     text-align: center;
 }
 
+section {
+    position: relative;
+    margin-top: -10%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding-bottom: 30px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
 /* spinner */
 
 .lds-hourglass {
