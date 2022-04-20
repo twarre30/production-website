@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"></link>
-    <title>Results</title>
+    <title>404 Page</title>
 </head>
 <style>
-    body {
+body {
     background-color: hsl(43, 99%, 75%);
 }
 
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    color: hsl(30, 46%, 35%);
+    font-size: 75px;
+    padding: 25px;
+    margin: 100px 0;
+}
 
 a {
     text-decoration: underline overline hsl(209, 84%, 51%);
     font-size: 25px;
     font-weight: 900;
     color:  hsl(30, 46%, 35%);
-    margin-left: 40%;
-    margin-top: 100%;
+    margin-left: 10%;
 }
 
 a:hover {
@@ -36,16 +43,20 @@ div{
     text-align: center;
 }
 
+p {
+    font-size: 50px;
+    color:hsl(30, 46%, 35%);
+    padding-bottom: 5%;
+    margin-top: -15%;
+}
+
 </style>
 <body>
-    <div id="results"></div>
+    <h1>404 Error</h1>
     <a href="cover.html">Back to Home</a>
-    <script>
-        const resultsList = document.querySelector('#results')
-        new URLSearchParams(window.location.search).forEach((value, name) => {
-            resultsList.append(`${name}: ${value}`)
-            resultsList.append(document.createElement('br'))
-        })
-    </script>
+    <div>
+        <p>Sorry, Something went wrong!</p>
+        <img src="images/musicTime.webp" alt="Music Time with K.K.">
+    </div>
 </body>
 </html>
