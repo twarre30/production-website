@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"></link>
-    <link rel="stylesheet" href="index.css">
-    <script defer src = "index.js"></script>
+    <link rel="stylesheet" href="entry.css">
+    <script defer src = "entry.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Production Website</title>
+    <title>User Form</title>
 </head>
-<body onLoad="popup('entry.html', 'ad')">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="villagers.html">Villagers</a></li>
-                <li><a href="fishes.html">Fish</a></li>
-            </ul>
-        </nav>    
-        <div class="title"><img src="images/titleImage.png" alt="Welcome to Animal Crossing"></div>
-        <div class="picnic"><img src="images/familyPicnic.jpg" alt="Family Picnic">
-    
-    <!--  <div class="lds-hourglass"></div>   Spinner-->  
-    </main>
+<body>
+    <h1>Welcome, Please Check In!</h1>
+    <form action="results.html" method="GET">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="Name" id="name" placeholder="Name" required>
+        </div>
+        <div>
+            <label for="favorite-animal">Favorite Animal</label>
+            <select name="Favorite Animal" id="favorite-animal" required>
+            <option value="">None</option>
+            <option label="Bear" value="Bear">Bear</option>
+            <option label="Dog" value="Dog">Dog</option>
+            <option label="Cat" value="Cat">Cat</option>
+            <option label="Hamster" value="Hamster">Hamster</option>
+            <option label="Horse" value="Horse">Horse</option>
+            <options label="Rabbit" value="Rabbit">Rabbit</options>
+            </select>
+        </div>
+        <button type="reset">Reset</button>
+        <button class="myBtn" type="submit">Submit</button>
+    </form>
 </body>
 </html>
