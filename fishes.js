@@ -7,9 +7,9 @@ let fishes = []
 
 searchInput.addEventListener('input', event => {
     const value = event.target.value.toLowerCase()
-        fishes.forEach(fish => {
+    fishes.forEach(fish => {
         const isVisible = fish.name.toLowerCase().includes(value) || fish.location.toLowerCase().includes(value) ||
-            fish.rarity.toLowerCase().includes(value) || fish.shadow.toLowerCase().includes(value) 
+            fish.rarity.toLowerCase().includes(value) || fish.shadow.toLowerCase().includes(value)
         fish.element.classList.toggle('hide', !isVisible)
     })
 })
@@ -22,13 +22,13 @@ fetch(url)
         fishes = data.map(fish => {
             const card = fishCardTemplate.content.cloneNode(true).children[0]
             const image = card.querySelector('[data-image]')
-            const name = card.querySelector('[data-name]')    
+            const name = card.querySelector('[data-name]')
             const location = card.querySelector('[data-availability-location]')
             const rarity = card.querySelector('[data-availability-rarity')
             const shadow = card.querySelector('[data-shadow]')
             const price = card.querySelector('[data-price]')
             const cj = card.querySelector('[data-price-cj]')
-            image.src = fish.image_uri 
+            image.src = fish.image_uri
             name.textContent = fish.name['name-USen']
             location.textContent = `Location: ${fish.availability['location']}`
             rarity.textContent = `Rarity: ${fish.availability['rarity']}`
@@ -41,6 +41,6 @@ fetch(url)
                 element: card
             }
         })
-        }).catch((error) => {
-            window.location.href = '404page.html'
-        })
+    }).catch((error) => {
+        window.location.href = '404page.html'
+    })

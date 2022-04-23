@@ -11,8 +11,8 @@ searchInput.addEventListener('input', event => {
         const isVisible = villager.name.toLowerCase().includes(value) || villager.personality.toLowerCase().includes(value) ||
             villager.birthday.toLowerCase().includes(value) || villager.species.toLowerCase().includes(value) ||
             villager.gender.toLowerCase().includes(value) || villager.hobby.toLowerCase().includes(value) ||
-            villager.phrase.toLowerCase().includes(value) 
-        villager.element.classList.toggle('hide', !isVisible)  
+            villager.phrase.toLowerCase().includes(value)
+        villager.element.classList.toggle('hide', !isVisible)
     })
 })
 
@@ -24,14 +24,14 @@ fetch(url)
         villagers = data.map(villager => {
             const card = villagerCardTemplate.content.cloneNode(true).children[0]
             const image = card.querySelector('[data-image]')
-            const name = card.querySelector('[data-name]')    
+            const name = card.querySelector('[data-name]')
             const personality = card.querySelector('[data-personality]')
             const birthday = card.querySelector('[data-birthday')
             const species = card.querySelector('[data-species]')
             const gender = card.querySelector('[data-gender]')
             const hobby = card.querySelector('[data-hobby]')
             const phrase = card.querySelector('[data-phrase]')
-            image.src = villager.image_uri 
+            image.src = villager.image_uri
             name.textContent = villager.name['name-USen']
             personality.textContent = `Personality: ${villager.personality}`
             birthday.textContent = `Birthday: ${villager['birthday-string']}`
@@ -45,6 +45,6 @@ fetch(url)
                 gender: villager.gender, hobby: villager.hobby, phrase: villager['catch-phrase'], element: card
             }
         })
-        }).catch((error) => {
-            window.location.href = '404page.html'
-        })
+    }).catch((error) => {
+        window.location.href = '404page.html'
+    })
