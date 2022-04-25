@@ -10,7 +10,8 @@ const greeting = document.createElement("p")
 console.log(animal)
 resultsList.append(greeting)
 
-.catch((error) => {
+
+.catch ((error) => {
     window.location.href = '404page.html'
 })
 
