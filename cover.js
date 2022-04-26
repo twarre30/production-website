@@ -27,11 +27,9 @@ function getFavoriteAnimal(favoriteAnimal) {
     fetch('https://acnhapi.com/v1a/villagers')
         .then(response => response.json())
         .then(data => {
-                data.map(response => response)
-                    .filter(villager => villager.species === `${favoriteAnimal}`)
-            console.log(data)
-            const card = document.createElement("div")
-            card.innerHTML = `
+            data.filter(villager => villager.species === `${favoriteAnimal}`).forEach(villager => {
+                const card = document.createElement("div")
+                card.innerHTML = `
                 <img src='${villager.image_uri}' alt='${villager.name['name-USen']}'/>
                 <figcaption>${villager.name['name-USen']}</figcaption >
                 <ul>
@@ -42,8 +40,10 @@ function getFavoriteAnimal(favoriteAnimal) {
                     <li> Hobby:${villager.hobby} </li>
                 </ul>
                 `
-            $main.append(card)
-        }) .catch((error) => {
-            window.location.href = '404page.html'
-    })
+                $main.append(card)
+                
+            })//.catch((error) => {
+            //window.location.href = '404page.html'
+            //})
+        })
 }
