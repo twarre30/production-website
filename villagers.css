@@ -49,22 +49,6 @@ a:hover {
     background-color: hsl(30, 46%, 55%)
 }
 
-.search-wrapper {
-    font-size: 30px;
-    font-weight: bolder;
-    padding: 20px;
-    border: 0;
-}
-
-input {
-    font-size: 25px;
-}
-
-.hide {
-    display: none;
-}
-
-
 div {
     display: flex;
     flex-direction: column;

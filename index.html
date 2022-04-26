@@ -5,32 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="cover.css">
-    <script defer src="cover.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Production Website</title>
 </head>
-<main>
-<body>
-    <nav>
-        <ul>
-            <li><a href="cover.html">Home</a></li>
-            <li><a href="villagers.html">Villagers</a></li>
-            <li><a href="fishes.html">Fish</a></li>
-        </ul>
-    </nav>
-    <div class="title"><img src="images/titleImage.png" alt="Welcome to Animal Crossing"></div>
-    <section id="results"></section>
-    <form>
-        <label for="favorite-animal">What is your favorite animal?</label>
-        <br>
-        <input id="favorite-animal" type="text" placeholder="Type of animal" name="favorite-animal" />
-        <input id="submit" type="submit" value="Submit" />
-        <input type="reset" value="Reset" />
-    </form>
 
-   <!-- <div class="picnic"><img src="images/familyPicnic.jpg" alt="Family Picnic"> -->
-        </main>
+<body>
+        <nav>
+            <ul>
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="villagers.html">Villagers</a></li>
+            </ul>
+        </nav>
+        <div class="title"><img src="images/titleImage.png" alt="Welcome to Animal Crossing"></div>
+        <form>
+            <label for="favorite-animal">What is your favorite animal?</label>
+            <br>
+            <input id="favorite-animal" type="text" placeholder="Type of animal eg. Dog, Cub" name="favorite-animal" />
+            <input id="submit" type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </form> 
+    <main>
+    <!--Spinner-->
+    <div class="lds-hourglass"></div>
+    </main>
 </body>
-</main>
+<!--Back to top button-->
+<a href="#" class="top">Back to Top &#8593;</a>
+
 </html>
