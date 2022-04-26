@@ -8,7 +8,7 @@ GitHub Link: [Production-Website](https://github.com/twarre30/production-website
 
 This is a website about Animal Crossing New Horizon data.
 
-It contains all the villagers and the fish currently in the game.
+It contains all the villagers currently in the game.
 
 I may add more in the future to complete the website
 
