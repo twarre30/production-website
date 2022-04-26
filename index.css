@@ -1,22 +1,10 @@
 body {
-    background-image: url(images/background\ for\ form.jpg);
-    background-repeat: repeat;
-    background-size: 100%;
-}
-
-h1 {
-    text-align: center;
-    font-weight: bolder;
-    color: hsl(30, 46%, 35%);
-    font-size: 75px;
-    padding: 25px;
-    margin: 100px 0;
+    background-color: hsl(43, 99%, 75%);
 }
 
 nav {
     display: inline-flexbox;
     position: relative;
-    margin-top: -6%;
     margin-left: 85%;
     padding: 30px;
     font-size: 20px;
@@ -43,105 +31,51 @@ li {
     background-color: hsl(30, 46%, 55%)
 }
 
-input {
-    font-size: 40px;
+
+.title {
+    text-align: center;
+    margin-top: -10%;
+    padding-bottom: 20px;
 }
 
-div {
-    background-color: hsl(43, 99%, 75%);
-    border: 1px solid hsl(30, 46%, 35%);
+.picnic {
+    text-align: center;
+    margin-top: 2%;
+}
+
+section {
+    position: relative;
+    margin-top: -10%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 73%;
+    padding-bottom: 30px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.hide {
+    display: none;
 }
 
 label {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     padding: 30px;
 }
 
-select {
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-}
-
 form {
-    display: inline-block;
+    display: block;
     align-items: center;
-    max-width: 50%;
-    margin-left: 30%;
-    margin-bottom: 20px;
-}
-
-button {
     text-align: center;
-    width: 315px;
-    height: 183px;
-    font-weight: bold;
-    background-color: hsl(43, 99%, 75%);
-    font-size: 50px;
-    margin: 1%;
-    border-radius: 50%;
-    border: 3px solid black;
-}
-
-button:hover {
-    color: hsl(209, 84%, 51%);
-    transition: color 125ms;
-    text-decoration: none;
-    background-color: #fff;
-}
-
-.radio {
-    font-size: 20px;
-}
-
-.rbutton {
-    position: relative;
-    margin-left: 90%;
-    margin-top: -6%;
-}
-
-img{
-    width: 80px;
-    padding: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-figcaption {
-    font-weight: bold;
+input {
     text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    text-transform: capitalize;
-}
-
-.specs {
-    text-align: center;
-    font-size: 22px;
-    padding: 10px;
-}
-
-/* Back to top */
-
-.top {
-    --offset: 50px; 
-
-    position: sticky;
-    bottom: 20px;      
-    margin-left: 90%; 
-    place-self: end;
-    margin-top: calc(100vh + var(--offset));
-
-  /* visual styling */
-    text-decoration: none;
-    padding: 10px;
-    font-family: sans-serif;
-    color: #fff;
-    background: #000;
-    border-radius: 100px;
-    white-space: nowrap;
+    font-size: 20px;
 }
 
 /* spinner */

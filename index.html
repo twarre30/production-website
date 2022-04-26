@@ -5,35 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="index.css">
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="cover.css">
+    <script defer src="cover.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>User Form</title>
+    <title>Production Website</title>
 </head>
-
+<main>
 <body>
-    <h1>Welcome, Please Check In!</h1>
-    <form action="cover.html" method="GET">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="Name" id="name" placeholder="Name" required>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="cover.html">Home</a></li>
+            <li><a href="villagers.html">Villagers</a></li>
+            <li><a href="fishes.html">Fish</a></li>
+        </ul>
+    </nav>
+    <div class="title"><img src="images/titleImage.png" alt="Welcome to Animal Crossing"></div>
+    <section id="results"></section>
+    <form>
+        <label for="favorite-animal">What is your favorite animal?</label>
         <br>
-        <div>
-            <label for="animal">Animal</label>
-            <select name="Animal" id="animal" required>
-                <option value="">None</option>
-                <option label="bear" value="bear">bear</option>
-                <option label="dog" value="dog">dog</option>
-                <option label="cat" value="cat">cat</option>
-                <option label="hamster" value="hamster">hamster</option>
-                <option label="horse" value="horse">horse</option>
-                <option label="rabbit" value="rabbit">rabbit</option>
-            </select>
-        </div>
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
+        <input id="favorite-animal" type="text" placeholder="Type of animal" name="favorite-animal" />
+        <input id="submit" type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
     </form>
-</body>
 
+   <!-- <div class="picnic"><img src="images/familyPicnic.jpg" alt="Family Picnic"> -->
+        </main>
+</body>
+</main>
 </html>

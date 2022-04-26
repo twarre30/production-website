@@ -1,16 +1,3 @@
-const resultsList = document.querySelector('#results');
-const params = new URLSearchParams(window.location.search);
-const firstName = params.get("Name");
-const animal = params.get("Animal")
-const greeting = document.createElement("p")
-    .innerHTML = `
-    Welcome ${firstName}!
-    Your chosen animal is ${animal}. 
-    `
-resultsList.append(greeting)
-
-
-
 const $form = document.querySelector("form")
 const $main = document.querySelector("main")
 const reset = document.querySelector("reset")
@@ -42,8 +29,8 @@ function getFavoriteAnimal(favoriteAnimal) {
                 `
                 $main.append(card)
                 
-            })//.catch((error) => {
-            //window.location.href = '404page.html'
-            //})
+            }).catch((error) => {
+            window.location.href = '404page.html'
+            })
         })
 }
