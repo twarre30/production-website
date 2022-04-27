@@ -16,7 +16,7 @@ function getFavoriteAnimal(favoriteAnimal) {
         .then(response => response.json())
         .then(data => {
             spinner.classList.add('hidden')
-            data.filter(villager => villager.species === `${favoriteAnimal}`).forEach(villager => {
+            data.filter(villager => villager.species === favoriteAnimal).forEach(villager => {
                 const card = document.createElement("div")
                 card.innerHTML = `
                 <img src='${villager.image_uri}' alt='${villager.name['name-USen']}'/>
