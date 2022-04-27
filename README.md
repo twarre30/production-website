@@ -10,7 +10,7 @@ This is a website about Animal Crossing New Horizon data.
 
 It contains all the villagers currently in the game.
 
-I may add more in the future to complete the website
+I may add more in the future to compconste the website
 
 ### API Link
 

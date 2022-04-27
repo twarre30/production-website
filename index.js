@@ -5,8 +5,8 @@ const spinner = document.querySelector('.lds-hourglass')
 
 $form.addEventListener("submit", (event) => {
     event.preventDefault();
-    let formData = new FormData(event.target);
-    let favoriteAnimal = formData.get("favorite-animal")
+    const formData = new FormData(event.target);
+    const favoriteAnimal = formData.get("favorite-animal")
     getFavoriteAnimal(favoriteAnimal);
 })
 
@@ -31,7 +31,7 @@ function getFavoriteAnimal(favoriteAnimal) {
                 `
                 $main.append(card)
             }).catch((error) => {
-            window.location.href = '404page.html'
+                window.location.href = '404page.html'
             })
         })
 }

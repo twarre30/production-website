@@ -8,16 +8,16 @@ fetch('https://acnhapi.com/v1a/villagers')
         return data.map(villager => villager).forEach(villager => {
             const card = document.createElement("div")
             card.innerHTML = `
-        <img src='${villager.image_uri}' alt='${villager.name['name-USen']}'/>
-        <figcaption>${villager.name['name-USen']}</figcaption >
-        <ul>
-            <li> Personality: ${villager.personality}</li>
-            <li> Birthday: ${villager['birthday-string']}</li>
-            <li> Species: ${villager.species}</li>
-            <li> Gender: ${villager.gender} </li>
-            <li> Hobby:${villager.hobby} </li>
-        </ul>
-    `
+                <img src='${villager.image_uri}' alt='${villager.name['name-USen']}'/>
+                <figcaption>${villager.name['name-USen']}</figcaption >
+                <ul>
+                    <li> Personality: ${villager.personality}</li>
+                    <li> Birthday: ${villager['birthday-string']}</li>
+                    <li> Species: ${villager.species}</li>
+                    <li> Gender: ${villager.gender} </li>
+                    <li> Hobby:${villager.hobby} </li>
+                </ul>
+            `
             villagerCardContainer.append(card)
         })
     }).catch((error) => {
